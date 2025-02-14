@@ -3,30 +3,33 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Website Navigation</title>
+    <title>Website Navigation | Contact</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Abhi">
-    <meta name="description" content="HTML5 website nav example">
+    <meta name="author" content="asethu11">
+    <meta name="description" content="The third page on our website is named Contact">
 </head>
 <body>
-    <a href="main-content" id='skip-link'>Skip to main content</a>
+    <a href="#main-content" id='skip-link'>Skip to main content</a>
     <header>
-        <h1>Website Navigation | About</h1>
+        <h1>Website Navigation | Contact</h1>
         <nav aria-label="Main Navigation">
             <ul>
-                <li><a href="#" ari-current="page">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" aria-current="page">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
-        <p>Main page of the website</p>
+        <p>Contact page of the website</p>
     </main>
     
     <footer>
-        <p>Copyright &copy; 2024 - asethu11 </p>
+        <p>Copyright &copy; <span id="year"></span> - asethu11 </p>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
     </footer>
 </body>
 </html>
